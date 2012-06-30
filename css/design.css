@@ -1,0 +1,313 @@
+        body {
+            /*font-family: "Open Sans", arial, sans-serif;*/
+            font-family: arial, sans-serif;
+            background-color: #FFFFFF;
+            font-size: 14px;
+        }
+        
+        select {
+            border-width: 0;
+            background-color: #EDEDED;
+            font-size: 10pt;
+            padding: 0 2px;
+        }
+        
+        #project-logo {
+            background-color: #6165A5;
+            padding: 3px 5px;
+            /*border: 1px solid #88A8E0;*/
+            color: #fff;
+            cursor: default;
+            font-weight: bold;
+        }
+        
+        #project-logo .wb {
+            opacity: 0.8;
+        }
+        
+        #project-logo  .vqd {
+            opacity: 1;
+            
+        }
+        #right-pane {
+            border: 1px solid #B2B2B2;
+            background-color: #F4F4F4;
+            padding: 5px 10px;
+
+        }
+        
+        #design-pane {
+            height: 200px;
+            border: 1px solid #A3A3A3;
+            background-color: #FFFFFF;
+            margin-top: 10px;
+            position: relative;
+            overflow: scroll;
+        }
+        
+        .pane {
+            border: 1px solid #B2B2B2;
+            border-top-color:#A3A3A3 ; 
+            border-bottom-color: #EFEFEF ; 
+            padding: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            background-color: #D6D6D6;
+
+        }
+        
+        .line-item {
+            overflow: auto;
+            border-bottom: 1px solid #C6C6C6;
+            background-color: #F9F9F9;
+            /*background-color: #F2F2F2;*/
+            padding: 1px 3px 0;
+            cursor: move;
+        }
+        
+        .hidden-item {
+            display:none;
+        }
+        
+        .line-item > div {
+            float: left;
+
+        }
+        .icon {
+            height: 15px;
+            width: 15px;
+            margin: 4px 1px 0 1px;
+            cursor: pointer;
+        }
+        
+        .line-item .icon {
+            opacity: 0.0;
+            
+        }
+        
+        .line-item .icon:hover {
+            opacity: 1.0 !important;
+            
+        }
+        .line-item:hover .icon {
+            opacity: 0.4;
+            
+        }
+        .icon.delete {
+            background-image: url('.././images/icons/cross.png');
+            
+        }
+        
+        .icon.rearrange {
+            background-image: url('.././images/icons/up-down16.png');
+        }
+        .line-item .property-editor {
+            margin-left: 5px;
+            font-size: 12px;
+            float: none;
+        }
+        .property-editor > div {
+            float:left;
+            height: inherit;
+            font-size: 14px;
+        }
+        .property-editor .field-name {
+            min-width: 100px;
+            height: inherit;
+            padding-top: 2px;
+            font-size: 10pt;
+        }
+        
+         .diag-table {
+            outline: 1px dotted #84FF8C;
+            float: left;
+            z-index: 10;
+        }
+        
+        .diag-table > div {
+            height: 20px;      /* must match with those of .diag-cell*/
+            width: 140px;
+        }
+
+        .diag-table > .label {
+            /*background-color: #FFF3A5;*/
+            /*background-color: #A5D3FF;*/
+            background-color: #8EB6DB;
+            color: #ffffff;
+            /*padding: 2px 3px;*/
+        }
+        
+        .diag-cell {
+            height: 20px;
+            min-width: 180px;
+            outline: 1px solid #4074CE;
+            background-color: #BBDBF7;
+            z-index: 10;
+            left:0;
+            top:0;
+            opacity: 0.77;
+            
+        }
+        
+        .diag-cell.label {
+            text-align: center;
+            /*background-color: #496FB7;*/
+            background-color: #2F4A77;
+            font-weight: bold;
+            color: #FFF;
+            cursor:  move;
+        }
+        
+        /*???*/
+        .diag-join {
+            z-index: 0;
+        }
+        .primary-key {
+            font-weight: bold;
+        }
+        #sql-out.input-mode  .output {
+            display:none;
+        }
+        #sql-out.output-mode  .input {
+            display:none;
+        }
+        #sql-out .output {
+            /*height: 50px;*/
+            /*width: 100px;*/
+            background-color: #fff;
+            font-family: monospace;
+            padding: 2px;
+        }
+        
+        .operator {
+            margin: 3px 10px;
+        }
+                
+        #pane-select .alias {
+            width: 100px;
+        }
+        
+        .inline-pane {
+            float: left;
+            width: 30%;
+            overflow: auto ;
+        }
+        /*
+        .inline-pane > fieldset {
+            height: 50%;
+        }
+        */
+        
+        legend {
+            border:1px solid #A0A0A0;
+            background-color: #FFFFFF;
+            color: #727272;
+            font-size: 10pt;
+            font-weight: bolder;
+            padding: 1px 5px;
+        }
+        /**/
+        /*input.alias {*/
+        /*    height: 14px;*/
+        /*}*/
+        .btn-refresh {
+            padding: 3px 5px;
+            background-color: #F2DCAB;
+            border: 1px solid #BC811A;
+            font-weight: bold;
+            color: #663B0B;
+        }
+        
+        .btn-refresh:hover {
+            background-color: #A0866A;
+            color: #F2DCAB;
+
+
+        }
+
+        .cell-dragger > .cell-edit {
+            float: right;
+            /*width:10px;*/
+            /*margin-top: 2px;*/
+            margin: 2px 5px 0 0;
+
+        }
+        .hoverable {
+            opacity:0;
+            cursor: pointer;
+        }        
+        .cell-dragger:hover .hoverable {
+            opacity:0.7;
+        }
+        
+        .property-editor span.label {
+            opacity: 0.7;
+            font-size: smaller;
+            
+        }
+        
+        .property-editor .editable {
+            margin-left: 5px;
+            float: right;
+            margin: 0 5px;
+        }
+        #tool-bar .tool-bar-btn {
+            float:left;
+            cursor: pointer;
+            padding: 2px 4px;
+            margin-right: 5px;
+            background: #777777;
+            color: #FFFFFF;
+            border: 1px solid #494949;
+        }
+        
+        #tool-bar {
+            overflow: auto;
+        }
+        .design-mode .pane {
+            display: block;    
+        }
+        
+        .diag-cell.label .close {
+            float:right;
+            padding:2px;
+        }
+
+        .diag-cell.label .close:hover {
+            background-color:  #E8EFFC;
+            color: #6C85B5;
+            cursor:  pointer;
+        }
+        
+        /*.diag-cell {*/
+        /*    opacity: 0.8;*/
+        /*}*/
+        
+        .orderby {
+            background: #4362A5;
+            color: #fff;
+            font-weight: bold; 
+            cursor:  pointer;
+            padding: 0 3px;
+        }
+        
+        /*.cell-edit {*/
+        /*    margin-top: 2px;*/
+        /*}*/
+        /**/
+        #table-list {
+            overflow-x: auto;
+            overflow-y: scroll;
+            max-height: 300px;
+ 
+        }
+        
+        #sql-text-op {
+            padding-left: 10px;
+        }
+        
+        .diag-cell .field-name {
+            /*overflow-x: hidden;*/
+            /*font-family: Tahoma,sans-serif;*/
+            opacity: 1;   
+        }

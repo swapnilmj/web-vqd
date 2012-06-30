@@ -1,0 +1,42 @@
+
+#table-list {
+    /*width:300px;*/
+    font-family : sans-serif;
+    
+}
+#table-list  .item {
+    border: 1px  solid #D8D8D8;
+    cursor: pointer;
+}
+
+#table-list .selected {
+    background-color: #FFEA8E;
+}
+
+#table-list .added {
+    background-color: #CECECE;
+}
+
+#table-btns {
+    margin-top: 10px;
+}
+
+#table-btns .butn {
+    background-color: #ADCFFF;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+
+#table-selection {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    z-index: 10000;
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border: 5px solid #C4C4C4;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
