@@ -10,6 +10,7 @@
             background-color: #EDEDED;
             font-size: 10pt;
             padding: 0 2px;
+            outline: 1px solid #ADADAD;
         }
         
         #project-logo {
@@ -95,7 +96,7 @@
         }
         .icon.delete {
             background-image: url('.././images/icons/cross.png');
-            
+            margin-right: 5px;
         }
         
         .icon.rearrange {
@@ -105,6 +106,7 @@
             margin-left: 5px;
             font-size: 12px;
             float: none;
+            overflow: auto;
         }
         .property-editor > div {
             float:left;
@@ -311,3 +313,13 @@
             /*font-family: Tahoma,sans-serif;*/
             opacity: 1;   
         }
+        
+        /*
+        #pane-where {
+            width:20%;
+        }*/
+        
+        #pane-where {
+            width: auto;
+        }
+
