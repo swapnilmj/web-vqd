@@ -57,8 +57,9 @@
 	<script type="text/javascript" src="coffee/core.js"> </script>
 	<script type="text/javascript" src="coffee/core.panes.js"> </script>
 	<script type="text/javascript" src="coffee/design.js"> </script>
-    <script type="application/x-javascript" src="js/tbl-selection.js"></script>
-
+  <script type="application/x-javascript" src="js/tbl-selection.js"></script>
+	
+	
 	<script type="application/x-javascript">
 
         window.swapnil = {};
@@ -130,7 +131,7 @@
 		</div>
 		<fieldset id="pane-where" class="pane inline-pane">
         <legend> WHERE </legend>
-		<textarea id="" cols="45" rows="5"></textarea>
+		<textarea id="" cols="30" rows="5"></textarea>
 		</fieldset>
     </div>
 
