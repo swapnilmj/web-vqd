@@ -58,6 +58,8 @@
 	<script type="text/javascript" src="coffee/core.panes.js"> </script>
 	<script type="text/javascript" src="coffee/design.js"> </script>
   <script type="application/x-javascript" src="js/tbl-selection.js"></script>
+
+	<!--<script type="text/javascript" src="coffee/demo.js"> </script>-->
 	
 	
 	<script type="application/x-javascript">
@@ -80,6 +82,8 @@
 
 <body>
 
+<div id="content">
+			
     <div id="right-pane" class="design-mode">
 		<div id="tool-bar" >
 				<span id="project-logo" style="float: right;">
@@ -89,7 +93,7 @@
 				<span style="float: left;">
 				Schema : 
 				<select name="schema" >
-					<option value=""> --Select-- </option>
+					<option value="" > --Select-- </option>
 
 					<?php
 
@@ -109,12 +113,15 @@
 		<div class="pane output-mode" id="sql-out">
             <div class="output">
 				<!-- SQL output -->
-				<pre id="sql-text-op"></pre>
+				<pre id="sql-text-op">
+					Select a schema and then add tables/views.
+				</pre>
 			</div>
 		</div>
 		
 		<div id="design-pane" class="pane">
             <!--design pane-->
+            
         </div>
 		<fieldset id="pane-select" class="pane inline-pane">
 			<legend> SELECTED FIELDS </legend>
@@ -154,6 +161,8 @@
 			</div>
 		</div>
 	</div>
+
+</div>
 
 <script id="table-label-template" type="text/template" >
 <div class="close " title="">
@@ -272,10 +281,9 @@
     <div class="icon delete"></div>
     <div class="property-editor">
         <div class="field-name">
-            <%=  TableName  %>.
-            <%= ColumnName %>
+            <%=  TableName  %>.<%= ColumnName %>
         </div>
-        <div class="" style="padding-right:10px;">
+        <div class="" style="padding-right:10px;float: right;">
             <select name="">
             <% var selAsc = (Sort== 'ASC') ? "selected='selected'" : ""  %>
             <% var selDesc = (Sort== 'DESC') ? "selected='selected'" : ""  %>

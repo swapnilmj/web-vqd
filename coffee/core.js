@@ -320,7 +320,7 @@ $(function() {
       console.log("Table " + tableName + " already added");
       return 0;
     }
-    $.ajax({
+    return $.ajax({
       url: 'ajax/table_json.php',
       dataType: 'json',
       data: {
@@ -337,9 +337,9 @@ $(function() {
         TableFields.create(d);
       }
       SQLPaneView.listenEvents = true;
-      return TableFields.trigger();
+      TableFields.trigger();
+      return SQLPaneView.render();
     });
-    return SQLPaneView.render();
   };
 });
 

@@ -302,8 +302,8 @@ $ ->
           #async:false
         }).done( (data) ->
               SQLPaneView.listenEvents=false
-              Tables.create  TableName: tableName
-              #add data for one Table
+              Tables.create  TableName: tableName                
+
               for d in data
                 #console.time "creating TF"
                 TableFields.create d
@@ -312,9 +312,11 @@ $ ->
               
 
               TableFields.trigger()
+              SQLPaneView.render()
+
         )
       
-        SQLPaneView.render()
+        #SQLPaneView.render()
 
   window.Join = Backbone.Model.extend
       defaults: ->
