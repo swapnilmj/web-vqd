@@ -259,8 +259,8 @@
                         <% }else{ %>
                         <select name="">
                             <option <%= selInner %> value=<%= 'INNER_JOIN' %>   > inner </option>
-                            <option <%= selLeftOut %>  value=<%= 'LEFT_OUTER' %>  > left outer</option>
-                            <option <%= selRightOut %> value=<%= 'RIGHT_OUTER' %>  > right outer </option>
+                            <option <%= selLeftOut %>  value=<%= 'LEFT_OUTER' %>  > Left outer</option>
+                            <option <%= selRightOut %> value=<%= 'RIGHT_OUTER' %>  > Right outer </option>
                         </select>
                         
                         <% } %>
