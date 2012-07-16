@@ -1,3 +1,5 @@
+_notes/
 *.komodoproject
 .komodotools
-_notes/
+*.zip
+*.7z
