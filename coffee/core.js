@@ -13,7 +13,7 @@ $(function() {
     AND: ' AND ',
     OR: ' OR '
   };
-  Constants.DIAG_CELL_HEIGHT = 20;
+  Constants.DIAG_CELL_HEIGHT = 18;
   Constants.DIAG_UNIQUE_ID = "diag-table-";
   window.TableField = Backbone.Model.extend({
     defaults: function() {
