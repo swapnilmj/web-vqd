@@ -148,24 +148,32 @@
         }
         
         .diag-cell {
-            height: 20px;
+            height: 18px;       /* must match with those of .diag-cell*/
             min-width: 180px;
-            outline: 1px solid #4074CE;
+            /*outline: 1px solid #4074CE;*/
+            border:  1px solid #4074CE;
+            border-top: 0;
+            border-bottom: 0;
             background-color: #BBDBF7;
+            background-color: #C5E0F7;
             z-index: 10;
             left:0;
             top:0;
-            opacity: 0.77;
-            
+            opacity: 0.85;
+            font-size: 13px;
+            padding-bottom: 1px;
         }
         
         .diag-cell.label {
             text-align: center;
             /*background-color: #496FB7;*/
-            background-color: #2F4A77;
+            
+            border-color: #2D5AA8;
+            background-color: #182E4F;
             font-weight: bold;
             color: #FFF;
             cursor:  move;
+            font-size: 13px;
         }
         
         /*???*/
@@ -241,7 +249,7 @@
             float: right;
             /*width:10px;*/
             /*margin-top: 2px;*/
-            margin: 2px 5px 0 0;
+            margin: 0 5px 0 0;
 
         }
         .hoverable {
@@ -267,7 +275,8 @@
             float:left;
             cursor: pointer;
             padding: 2px 4px;
-            margin-right: 5px;
+            margin-left: 10px;
+            
             background: #777777;
             color: #FFFFFF;
             border: 1px solid #494949;
@@ -316,14 +325,19 @@
         
         #sql-text-op {
             padding-left: 10px;
+            font-size: 12px;
         }
         
         .diag-cell .field-name {
             /*overflow-x: hidden;*/
-            /*font-family: Tahoma,sans-serif;*/
-            opacity: 1;   
+            font-family: Tahoma,sans-serif;
+            opacity: 1;
+            /*font-size: 12px;*/
         }
         
+        .diag-cell input[type="checkbox"] {
+            margin: 2px 1px 0 3px !important; 
+        }
         /*
         #pane-where {
             width:20%;
