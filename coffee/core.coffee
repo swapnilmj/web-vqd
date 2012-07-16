@@ -21,7 +21,7 @@ $ ->
         }
 
 
-  Constants.DIAG_CELL_HEIGHT = 20
+  Constants.DIAG_CELL_HEIGHT = 18
   Constants.DIAG_UNIQUE_ID = "diag-table-"
   #Models
   window.TableField = Backbone.Model.extend
