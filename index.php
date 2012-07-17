@@ -266,8 +266,8 @@
                         <% } %>
                     </div>
                     <div class="field-name">
-                        <%=  RightTable  %>.
-                        <%=  RightField  %>
+												<%=  RightTable %><%=  (RightField=='') ? '' : '.'+ RightField  %>
+
                     </div>
                 </div>
     
