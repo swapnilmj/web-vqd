@@ -277,7 +277,7 @@ $ ->
 
 
         removeTable: ->
-          console.log "removing table"
+          #console.log "removing table"
           tableName=@model.get('TableName')
 
           for mTF in TableFields.getModelsByTableName( tableName )
@@ -293,7 +293,7 @@ $ ->
       if Tables.find( ((item) ->
                 item.get('TableName') == tableName)
                 , @)
-            console.log "Table #{tableName} already added"
+            #console.log "Table #{tableName} already added"
             return 0
       $.ajax({
           url: 'ajax/table_json.php',
@@ -375,7 +375,7 @@ $ ->
             m.LeftTable == @tableName || m.RightTable==@tableName
 
       removeJoinByTableName: (tableName) ->
-        console.log 'removing join'
+        #console.log 'removing join'
         for i in @getJoinsByTableName tableName
           i.destroy()
 

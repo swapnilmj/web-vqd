@@ -300,7 +300,6 @@ $(function() {
     },
     removeTable: function() {
       var mTF, tableName, _i, _len, _ref;
-      console.log("removing table");
       tableName = this.model.get('TableName');
       _ref = TableFields.getModelsByTableName(tableName);
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -317,7 +316,6 @@ $(function() {
     if (Tables.find((function(item) {
       return item.get('TableName') === tableName;
     }), this)) {
-      console.log("Table " + tableName + " already added");
       return 0;
     }
     return $.ajax({
@@ -423,7 +421,6 @@ window.JoinList = Backbone.Collection.extend({
   },
   removeJoinByTableName: function(tableName) {
     var i, _i, _len, _ref, _results;
-    console.log('removing join');
     _ref = this.getJoinsByTableName(tableName);
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
