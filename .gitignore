@@ -3,3 +3,4 @@ _notes/
 .komodotools
 *.zip
 *.7z
+/coffee/demo*
