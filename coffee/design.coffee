@@ -63,10 +63,11 @@ $ ->
               
               $('#sql-out').toggleClass 'output-mode input-mode'           
 
+  ###
   $('#pane-where textarea')
       .on 'blur', (event)->
         SQLPaneView.render()
-        
+  ###
   $('select[name=schema]')
       .on 'blur', (evt)->
         schema = $(evt.target).val()
@@ -91,7 +92,16 @@ $ ->
           $('#table-list').html(html)
           bindAddTableEvts()
         )
-        
+  
+  $('#pane-where textarea')
+    .on 'keyup', _.debounce(
+      (event) -> SQLPaneView.render(),
+      500)
+
+  $('#pane-where textarea')
+    .on 'blur', (event)->
+      SQLPaneView.render()
+      
   LoadTableList $('select[name=schema]').val()
 
         

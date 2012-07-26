@@ -45,9 +45,11 @@ $(function() {
     }
     return $('#sql-out').toggleClass('output-mode input-mode');
   });
-  $('#pane-where textarea').on('blur', function(event) {
-    return SQLPaneView.render();
-  });
+  /*
+    $('#pane-where textarea')
+        .on 'blur', (event)->
+          SQLPaneView.render()
+  */
   $('select[name=schema]').on('blur', function(evt) {
     var schema;
     schema = $(evt.target).val();
@@ -66,5 +68,11 @@ $(function() {
       return bindAddTableEvts();
     });
   };
+  $('#pane-where textarea').on('keyup', _.debounce(function(event) {
+    return SQLPaneView.render();
+  }, 500));
+  $('#pane-where textarea').on('blur', function(event) {
+    return SQLPaneView.render();
+  });
   return LoadTableList($('select[name=schema]').val());
 });
