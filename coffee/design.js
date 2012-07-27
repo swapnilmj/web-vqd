@@ -45,17 +45,13 @@ $(function() {
     }
     return $('#sql-out').toggleClass('output-mode input-mode');
   });
-  /*
-    $('#pane-where textarea')
-        .on 'blur', (event)->
-          SQLPaneView.render()
-  */
   $('select[name=schema]').on('blur', function(evt) {
     var schema;
     schema = $(evt.target).val();
-    return LoadTableList(schema);
+    if ($('select[name=schema]').val() === "") return App.reset();
   });
   window.LoadTableList = function(schema) {
+    if ($.cookie('schema') === schema) return;
     $.cookie('schema', schema);
     return $.ajax({
       url: "ajax/table_list.php",
@@ -71,8 +67,21 @@ $(function() {
   $('#pane-where textarea').on('keyup', _.debounce(function(event) {
     return SQLPaneView.render();
   }, 500));
-  $('#pane-where textarea').on('blur', function(event) {
-    return SQLPaneView.render();
-  });
-  return LoadTableList($('select[name=schema]').val());
+  return window.App = {
+    reset: function() {
+      $('select[name=schema]').val("");
+      if (localStorage) localStorage.clear();
+      setAppVisibility();
+      return SQLPaneView.render();
+    },
+    setAppVisibility: function() {
+      var show;
+      show = $('select[name=schema]').val() !== "";
+      if (show) {
+        return $('.pane').fadeIn(500);
+      } else {
+        return $('.pane').fadeOut(0);
+      }
+    }
+  };
 });

@@ -11,9 +11,6 @@ $ ->
                               $(this).addClass('selected')
 
                             if $('#right-pane').hasClass('results-mode')
-                              #fillResultData($('.output pre').html())
-                              #sqlOut="SELECT * FROM mDC"
-                              #sqlOut = $('.output pre').html()
                               sqlOut = QueryMaint.getSQL()
                               fillResultData(sqlOut)
 
@@ -29,7 +26,6 @@ $ ->
         $('#results-pane').html(html)
       )
 
-  #$('#design-results-btns .results-mode').on('clic)'clic
 
   #set design-mode as default
   $('#design-results-btns .design-mode').trigger('click')
@@ -55,7 +51,6 @@ $ ->
               
               else  #input
                 #hide input
-                #SQLDataRestorer.init(0, newSQL)
                 newSQL = $('#sql-text-ip').val()
                 SQLDataRestorer.init(0, newSQL)
                 #change btn label to Edit SQL
@@ -63,26 +58,14 @@ $ ->
               
               $('#sql-out').toggleClass 'output-mode input-mode'           
 
-  ###
-  $('#pane-where textarea')
-      .on 'blur', (event)->
-        SQLPaneView.render()
-  ###
   $('select[name=schema]')
       .on 'blur', (evt)->
         schema = $(evt.target).val()
-        #$.cookie 'schema', schema
-        #$.ajax({
-        #  url:"ajax/table_list.php"
-        #  data:{ schema: schema }
-        #  cache:false
-        #}).done( (html) ->
-        #  $('#table-list').html(html)
-        #  bindAddTableEvts()
-        #)
-        LoadTableList schema
+        if $('select[name=schema]').val() == ""
+          App.reset()
         
-  window.LoadTableList = (schema)->
+  window.LoadTableList = (schema)->      
+        if $.cookie('schema') == schema then return   #no loading required
         $.cookie 'schema', schema
         $.ajax({
           url:"ajax/table_list.php"
@@ -93,15 +76,25 @@ $ ->
           bindAddTableEvts()
         )
   
+  
   $('#pane-where textarea')
     .on 'keyup', _.debounce(
       (event) -> SQLPaneView.render(),
       500)
 
-  $('#pane-where textarea')
-    .on 'blur', (event)->
-      SQLPaneView.render()
-      
-  LoadTableList $('select[name=schema]').val()
-
+  window.App = {
+        reset : ->
+          $('select[name=schema]').val("")
+          if localStorage then localStorage.clear()
+          setAppVisibility()
+          SQLPaneView.render()
         
+        setAppVisibility : ->
+          #sets visibility of all but basic (top) ctrls
+          show = $('select[name=schema]').val() != ""
+          if show
+            $('.pane').fadeIn(500)
+          else
+            $('.pane').fadeOut(0)
+
+  }

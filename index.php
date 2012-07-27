@@ -66,8 +66,7 @@
 
         window.swapnil = {};
         $(function(){
-				//showTableList(false);
-						if(localStorage) localStorage.clear();
+					 if(localStorage) localStorage.clear();
 						
 			     $('.btn-refresh').click(function () {
                     $('.output > pre').html(QueryBuilder.GenerateSQL()); 
@@ -76,6 +75,8 @@
                 $('.bool.expr').draggable({
                         helper:'clone'
                 });
+						App.setAppVisibility();
+						bindAddTableEvts();
 		})
 	</script>
 </head>
@@ -93,7 +94,7 @@
 				<span style="float: left;">
 				Schema : 
 				<select name="schema" >
-					<option value="" > --Select-- </option>
+					<option value="" > -- Select schema -- </option>
 
 					<?php
 
@@ -148,7 +149,6 @@
 		</div>
 		<div id="table-list">
 		
-	
 		</div>	
 			<div id="table-btns">
 				<span class="butn ok">

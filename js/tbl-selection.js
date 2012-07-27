@@ -13,18 +13,18 @@ $( function(){
 			}
       
       window.bindAddTableEvts = function(){
-          $('#table-btns .ok').on('click', function(event){
-               $('#table-list .selected').each( function(i){
-            							 //continue only if it is not added
-                             if(! $(this).hasClass('added')){
-                                    var tblName = $.trim($(this).html());
-                                    AddTable(tblName);
-                                    $(this).addClass('added');
-                             }
-                        } )
-                                
-                      showTableList(false);
-                    })
+        $('#table-btns .ok').on('click', function(event){
+            App.setAppVisibility();
+          $('#table-list .selected').each( function(i){
+            //continue only if it is not added
+            if(! $(this).hasClass('added')){
+              var tblName = $.trim($(this).html());
+              AddTable(tblName);
+              $(this).addClass('added');
+            }
+          })
+          showTableList(false);
+         })
                     
                   $('#table-btns .cancel').on('click', function(event){
                           showTableList(false);
@@ -36,6 +36,12 @@ $( function(){
                   })
             
                   $('#btn-add-table').on('click', function(event){
+                              schema = $('select[name=schema]').val()
+                              if(schema == ""){
+                                    alert("Select a schema and then add tables")
+                                    return
+                              }
+                              LoadTableList(schema);
                               showTableList(true);
                   
                   });
