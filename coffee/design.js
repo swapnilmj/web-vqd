@@ -71,7 +71,7 @@ $(function() {
     reset: function() {
       $('select[name=schema]').val("");
       if (localStorage) localStorage.clear();
-      setAppVisibility();
+      this.setAppVisibility();
       return SQLPaneView.render();
     },
     setAppVisibility: function() {

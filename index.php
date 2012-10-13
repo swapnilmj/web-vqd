@@ -66,9 +66,10 @@
 
         window.swapnil = {};
         $(function(){
-					 if(localStorage) localStorage.clear();
-						
-			     $('.btn-refresh').click(function () {
+				if(localStorage) localStorage.clear();
+				$.cookie('schema','');
+				
+			    $('.btn-refresh').click(function () {
                     $('.output > pre').html(QueryBuilder.GenerateSQL()); 
                 });
                 
@@ -258,7 +259,7 @@
                             Cross Join
                         <% }else{ %>
                         <select name="">
-                            <option <%= selInner %> value=<%= 'INNER_JOIN' %>   > inner </option>
+                            <option <%= selInner %> value=<%= 'INNER_JOIN' %>   > Inner </option>
                             <option <%= selLeftOut %>  value=<%= 'LEFT_OUTER' %>  > Left outer</option>
                             <option <%= selRightOut %> value=<%= 'RIGHT_OUTER' %>  > Right outer </option>
                         </select>

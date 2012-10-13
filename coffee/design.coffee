@@ -86,7 +86,7 @@ $ ->
         reset : ->
           $('select[name=schema]').val("")
           if localStorage then localStorage.clear()
-          setAppVisibility()
+          @setAppVisibility()
           SQLPaneView.render()
         
         setAppVisibility : ->
