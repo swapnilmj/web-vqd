@@ -2,11 +2,6 @@
 Web-based Visual Query Designer is an open source software released under the MIT License
 ###
 
-
-
-
-
-
 $ ->
   window.Constants = {
         EQUALS : '='
@@ -20,13 +15,11 @@ $ ->
         OR : ' OR '
         }
 
-
   Constants.DIAG_CELL_HEIGHT = 18
   Constants.DIAG_UNIQUE_ID = "diag-table-"
   #Models
   window.TableField = Backbone.Model.extend
       defaults: ->
-        #TableName: ""  ?
         ColumnName: ""
         Selected: false
         Alias: ""
@@ -155,13 +148,9 @@ $ ->
           $(@el).css  opacity: if what then 0.5 else 1.0
 
         setJoinLeftTable :  ->
-          #console.log 'dragstart'
-          #@opacify true
           vqd.setJoinLeftField @el , @model.get('TableName'), @model.get('ColumnName')
 
         setJoinRightTable: ->
-          #console.log 'dragstop'
-          #@opacify false
           vqd.completeJoin @el , @model.get('TableName'), @model.get('ColumnName')
 
         toggleSelected: ->
@@ -169,12 +158,6 @@ $ ->
 
         toggleSort: ->
           @model.toggleSort()
-        ###
-        addToWhere: ->
-          #adds current model to 'where' conditions
-          WhereExprMgr.addNewBoolExpr @model
-        ###
-        
 
   window.Table = Backbone.Model.extend
       defaults: ->
