@@ -14,8 +14,6 @@ $ ->
                               sqlOut = QueryMaint.getSQL()
                               fillResultData(sqlOut)
 
-     
-
   fillResultData = (sql)->
       $.ajax({
         url:"query_results.php"
@@ -75,7 +73,6 @@ $ ->
           $('#table-list').html(html)
           bindAddTableEvts()
         )
-  
   
   $('#pane-where textarea')
     .on 'keyup', _.debounce(

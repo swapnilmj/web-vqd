@@ -62,7 +62,6 @@ $ ->
         @trigger()
 
       toggleSort: ->
-
         if @.get('Sort') == 'UNSORTED'
           @.set Sort : 'ASC'
         else
@@ -293,10 +292,8 @@ $ ->
                 #console.timeEnd "creating TF"
               SQLPaneView.listenEvents=true
               
-
               TableFields.trigger()
               SQLPaneView.render()
-
         )
       
         #SQLPaneView.render()
@@ -361,9 +358,6 @@ $ ->
         #console.log 'removing join'
         for i in @getJoinsByTableName tableName
           i.destroy()
-
-
-
 
   window.Joins = new JoinList()
          
@@ -445,5 +439,3 @@ $ ->
         label: "-"
         location: 0.5
        ] ]
-    
-

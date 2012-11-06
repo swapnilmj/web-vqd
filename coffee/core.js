@@ -178,11 +178,6 @@ $(function() {
     toggleSort: function() {
       return this.model.toggleSort();
     }
-    /*
-            addToWhere: ->
-              #adds current model to 'where' conditions
-              WhereExprMgr.addNewBoolExpr @model
-    */
   });
   window.Table = Backbone.Model.extend({
     defaults: function() {
