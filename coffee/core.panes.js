@@ -187,11 +187,6 @@ $(function() {
       Joins.bind('reset', this.render, this);
       Joins.bind('remove', this.render, this);
       return this.listenEvents = true;
-      /*
-                     BoolExprs.bind('add', @render, this)
-                     BoolExprs.bind('change', @render, this)
-                     BoolExprs.bind('remove', @render, this)
-      */
     },
     render: function() {
       try {

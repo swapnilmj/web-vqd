@@ -232,13 +232,13 @@ $(function() {
       view = new TableView({
         model: table
       });
-      $('#design-pane').append(view.render().el);
-      if (this.length > 1) {
-        return Joins.create({
-          LeftTable: this.getLasttableName(),
-          RightTable: table.get('TableName')
-        });
-      }
+      return $('#design-pane').append(view.render().el);
+      /*
+              if @length > 1
+                Joins.create
+                    LeftTable : @getLasttableName()
+                    RightTable : table.get('TableName')
+      */
     },
     getModelByTableName: function(tableName) {
       return this.find(function(m) {
@@ -469,7 +469,16 @@ window.vqd = {
     newJoinHost = Joins.find(function(m) {
       return (m.get('LeftTable') === vqd.leftJoinColumn.TableName && m.get('RightTable') === tableName) || (m.get('RightTable') === vqd.leftJoinColumn.TableName && m.get('LeftTable') === tableName);
     });
-    newJoinHost.joinOn(this.leftJoinColumn.TableName, this.leftJoinColumn.ColumnName, tableName, columnName);
+    if ((newJoinHost != null)) {
+      newJoinHost.joinOn(this.leftJoinColumn.TableName, this.leftJoinColumn.ColumnName, tableName, columnName);
+    } else {
+      Joins.create({
+        LeftTable: this.leftJoinColumn.TableName,
+        LeftField: this.leftJoinColumn.columnName,
+        RightTable: tableName,
+        RghtField: columnName
+      });
+    }
     return ConnectTableFields(this.leftJoinEl, el);
   }
 };

@@ -197,20 +197,13 @@ $ ->
         view = new TableView( model: table )
         $('#design-pane').append(view.render().el)
 
-        if @length > 1
-          Joins.create
-              LeftTable : @getLasttableName()
-              RightTable : table.get('TableName')
-
       getModelByTableName: (tableName) ->
         @find (m) -> m.get('TableName')== tableName
-
 
       getLasttableName: ->
         @last(2)[0].get('TableName')    #return last but one element since last element is the new element added
 
   window.Tables = new TableList()
-
 
   #instead of one big view for all TableFields
   #we have TableView(s) working for a group(single Table)
@@ -396,8 +389,15 @@ $ ->
       newJoinHost = Joins.find (m) ->
               (m.get('LeftTable') ==  vqd.leftJoinColumn.TableName and m.get('RightTable') == tableName) or
               (m.get('RightTable') ==  vqd.leftJoinColumn.TableName and m.get('LeftTable') == tableName)
-
-      newJoinHost.joinOn(@leftJoinColumn.TableName, @leftJoinColumn.ColumnName,tableName, columnName)
+      if (newJoinHost?)
+          newJoinHost.joinOn(@leftJoinColumn.TableName, @leftJoinColumn.ColumnName,tableName, columnName)
+      else
+          Joins.create {
+                  LeftTable  : @leftJoinColumn.TableName
+                  LeftField  : @leftJoinColumn.columnName
+                  RightTable : tableName
+                  RghtField  : columnName
+                  }
       ConnectTableFields @leftJoinEl, el
   }
 

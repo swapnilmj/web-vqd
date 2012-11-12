@@ -187,6 +187,7 @@ $ ->
             template: _.template($('#template').html())
             events:
             ###
+           
             el: $('.output > pre')
             initialize: ->
                TableFields.bind('change', @render, this)
@@ -195,17 +196,11 @@ $ ->
                Joins.bind('reset', @render, this)
                Joins.bind('remove', @render, this)
                @listenEvents = true
-               ###
-               BoolExprs.bind('add', @render, this)
-               BoolExprs.bind('change', @render, this)
-               BoolExprs.bind('remove', @render, this)
-               ###
             
             render: ->
               try
                 #$(@el).html(@getSQL())
                 $(@el).html(@getSQL()) if @listenEvents
-                
               catch error
                 #console.log error     #soln. : trigger change event after all models are fetched
               finally
@@ -227,18 +222,15 @@ $ ->
 
             getJoinPart: ->
               joinCnt = Joins.length
-
               #return just the table name if only single table is added
               if joinCnt == 0
                 return TableFields.first().get('TableName')
-
 
               ret=''
               ret += Array( joinCnt + 1 ).join '('     #opening brackets for all joins
               ret += @toJoinString.call(Joins.first().toJSON() ,true)
               for jfm in Joins.toJSON()[1..joinCnt ]
                 ret += @toJoinString.call(jfm)
-
               return ret
               
             toJoinString : (isFirst=false) ->
@@ -249,29 +241,20 @@ $ ->
                     when 'LEFT_OUTER' then return ' LEFT OUTER JOIN '
                     when 'RIGHT_OUTER' then return ' RIGHT OUTER JOIN '
 
-
               #ret = "#{ if isFirst then @LeftTable else '\r\n\t\t' } #{@Type} #{@RightTable} "
               ret = "#{ if isFirst then @LeftTable else '\r\n\t\t' } #{getJoinName( @Type) } #{@RightTable} "
               if @Type != 'CROSS_JOIN'
                 #ret += " ON " + (" #{@LeftTable}.#{col[0]} = #{@RightTable}.#{col[1]}" for col in  @Fields ).join(' AND ')
                 ret += " ON " + (" #{@LeftTable}.#{@LeftField} = #{@RightTable}.#{@RightField}" )
-              
               return ret + ")"
-
                                
             getWherePart: ->
                #"CustName LIKE 'Prof%'"
                #"1=1"
                
-               #if WhereExprMgr.rootBoolExprView
-               #  WhereExprMgr.rootBoolExprView.model.toString()
-               #else
-               #  ""
                $('#pane-where textarea').val()
 
-
             getSQL: ->
-
               #Select part
               selectedFields = _.sortBy ( m for m in TableFields.toJSON() when m.Selected ) ,
                         (i) -> i.SelectionOrder
@@ -295,7 +278,6 @@ $ ->
                 ret +="ORDER BY \n\t#{orderbyPart}"
               else
                 ret += "\n\n"
-
               return ret
       
       )
