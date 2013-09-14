@@ -192,6 +192,7 @@ $ ->
             initialize: ->
                TableFields.bind('change', @render, this)
                TableFields.bind('remove', @render, this)
+               Joins.bind('add', @render, this)
                Joins.bind('change', @render, this)
                Joins.bind('reset', @render, this)
                Joins.bind('remove', @render, this)

@@ -183,6 +183,7 @@ $(function() {
     initialize: function() {
       TableFields.bind('change', this.render, this);
       TableFields.bind('remove', this.render, this);
+      Joins.bind('add', this.render, this);
       Joins.bind('change', this.render, this);
       Joins.bind('reset', this.render, this);
       Joins.bind('remove', this.render, this);

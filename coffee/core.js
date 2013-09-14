@@ -233,12 +233,6 @@ $(function() {
         model: table
       });
       return $('#design-pane').append(view.render().el);
-      /*
-              if @length > 1
-                Joins.create
-                    LeftTable : @getLasttableName()
-                    RightTable : table.get('TableName')
-      */
     },
     getModelByTableName: function(tableName) {
       return this.find(function(m) {
@@ -474,9 +468,10 @@ window.vqd = {
     } else {
       Joins.create({
         LeftTable: this.leftJoinColumn.TableName,
-        LeftField: this.leftJoinColumn.columnName,
+        LeftField: this.leftJoinColumn.ColumnName,
         RightTable: tableName,
-        RghtField: columnName
+        RightField: columnName,
+        Type: 'INNER_JOIN'
       });
     }
     return ConnectTableFields(this.leftJoinEl, el);

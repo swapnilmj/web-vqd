@@ -394,9 +394,10 @@ $ ->
       else
           Joins.create {
                   LeftTable  : @leftJoinColumn.TableName
-                  LeftField  : @leftJoinColumn.columnName
+                  LeftField  : @leftJoinColumn.ColumnName
                   RightTable : tableName
-                  RghtField  : columnName
+                  RightField  : columnName
+                  Type        : 'INNER_JOIN'
                   }
       ConnectTableFields @leftJoinEl, el
   }
