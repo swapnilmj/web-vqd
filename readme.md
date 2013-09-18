@@ -4,7 +4,7 @@ Currently, it is designed only for MySQL .
 Feel free to try this tool for generating simple SELECT queries for the MySQL
 database.
 
-Think of it as a supplementary tool to your MySQL front-end tool (like [
+Think of it as a supplement to your MySQL front-end tool (like [
 phpMyAdmin ](http://www.phpmyadmin.net/) ).
 
 Please let me know if you find it useful.
