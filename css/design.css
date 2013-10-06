@@ -367,3 +367,7 @@
         .breadcrumbs-menu .current {
             font-weight: bolder;
         }
+
+        #table-selection {
+            opacity: 0.9;
+        }
