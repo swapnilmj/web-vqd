@@ -14,6 +14,14 @@ Why not try the <a target="_blank" href="http://web-vqd.sourceforge.net/demo/">o
 Sourceforge.net project link (mirror): [ http://sourceforge.net/projects/web-vqd/
 ](http://sourceforge.net/projects/web-vqd/)
 
+## Screenshots
+
+##### Design queries *visually*
+![Example](https://cloud.githubusercontent.com/assets/2190589/7006635/5b72b1c2-dca0-11e4-84db-cf1e3834a397.png)
+
+##### Drag-n-drop
+![Drag-n-drop](https://cloud.githubusercontent.com/assets/2190589/7006820/b4916176-dca1-11e4-8ad4-0a472f179cd3.png)
+
 ## Installation
 
 Extract all the files to the `www` folder of your web server. Open `conn.php`
