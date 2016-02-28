@@ -9,7 +9,7 @@ database.
 Think of it as a supplement to your MySQL front-end tool (like [
 phpMyAdmin ](http://www.phpmyadmin.net/) ).
 
-Why not try the <a target="_blank" href="http://web-vqd.sourceforge.net/demo/">online demo</a> ?
+Why not try the <a target="_blank" href="http://swapnilmj.github.io/web-vqd/">online demo</a> ?
 
 Sourceforge.net project link (mirror): [ http://sourceforge.net/projects/web-vqd/
 ](http://sourceforge.net/projects/web-vqd/)
