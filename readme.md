@@ -1,18 +1,15 @@
 # Web-based Visual Query Designer
 
-Web-based Visual Query Designer is a tool for visually generating SQL queries.
+Web-based Visual Query Designer (Web-VQD) is a tool for visually generating SQL queries. The creating joins by drag-n-drop is the key highlight.
 Currently, it is designed only for MySQL .
-
-Feel free to try this tool for generating simple SELECT queries for the MySQL
-database.
 
 Think of it as a supplement to your MySQL front-end tool (like [
 phpMyAdmin ](http://www.phpmyadmin.net/) ).
 
-Why not try the <a target="_blank" href="http://swapnilmj.github.io/web-vqd/">online demo</a> ?
 
-Sourceforge.net project link (mirror): [ http://sourceforge.net/projects/web-vqd/
-](http://sourceforge.net/projects/web-vqd/)
+# <a target="_blank" href="http://swapnilmj.github.io/web-vqd/">Demo</a>
+(Demo is hosted as a static site. APIs are hardcoded to return static JSON data.)
+
 
 ## Screenshots
 
@@ -27,21 +24,20 @@ Sourceforge.net project link (mirror): [ http://sourceforge.net/projects/web-vqd
 Extract all the files to the `www` folder of your web server. Open `conn.php`
 file and set the `$username` and `$password` for your MySQL database.
 
+
 ## Limitations (as of now)
 
-  * A join can be made between 2 tables only on one set of condition 
-  
+  * A join can be made between 2 tables only on one set of condition   
   * Aggregate queries and sub-queries are not yet supported
+
 
 ## License
 
 Web-based Visual Query Designer is an open source software released under the
 [MIT License](http://opensource.org/licenses/mit-license.php).
 
-##Feedback
+## Feedback
 Please let me know if you find it useful.
+swapnil [dot] gnu+webvqd [at] mailbox.org
 
 Swapnil Joshi
-
-swapnil [dot] gnu [at] gmail.com
-
