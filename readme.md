@@ -38,7 +38,7 @@ file and set the `$username` and `$password` for your MySQL database.
 Web-based Visual Query Designer is an open source software released under the
 [MIT License](http://opensource.org/licenses/mit-license.php).
 
-##Feedback
+## Feedback
 Please let me know if you find it useful.
 
 Swapnil Joshi
