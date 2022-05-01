@@ -1,6 +1,6 @@
 # Web-based Visual Query Designer
 
-Web-based Visual Query Designer is a tool for visually generating SQL queries.
+Web-based Visual Query Designer is a tool for visually generating SELECT SQL queries.
 Currently, it is designed only for MySQL .
 
 Feel free to try this tool for generating simple SELECT queries for the MySQL
@@ -9,10 +9,8 @@ database.
 Think of it as a supplement to your MySQL front-end tool (like [
 phpMyAdmin ](http://www.phpmyadmin.net/) ).
 
-Why not try the <a target="_blank" href="http://swapnilmj.github.io/web-vqd/">online demo</a> ?
-
-Sourceforge.net project link (mirror): [ http://sourceforge.net/projects/web-vqd/
-](http://sourceforge.net/projects/web-vqd/)
+<a target="_blank" href="http://swapnilmj.github.io/web-vqd/">Online demo</a>
+(adapted for a static website)
 
 ## Screenshots
 
@@ -21,6 +19,9 @@ Sourceforge.net project link (mirror): [ http://sourceforge.net/projects/web-vqd
 
 ##### Drag-n-drop
 ![Drag-n-drop](https://cloud.githubusercontent.com/assets/2190589/7006820/b4916176-dca1-11e4-8ad4-0a472f179cd3.png)
+
+## Screencast
+[Youtube](https://youtu.be/vezEzwSiIjc) / [Invidious](https://yewtu.be/watch?v=vezEzwSiIjc)
 
 ## Installation
 
