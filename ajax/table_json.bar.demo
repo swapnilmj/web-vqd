@@ -1,0 +1,27 @@
+[
+    {
+        "ColumnName": "*", 
+        "IsPrimaryKey": false, 
+        "TableName": "bar"
+    }, 
+    {
+        "ColumnName": "id", 
+        "IsPrimaryKey": true, 
+        "TableName": "bar"
+    }, 
+    {
+        "ColumnName": "bar_name", 
+        "IsPrimaryKey": false, 
+        "TableName": "bar"
+    }, 
+    {
+        "ColumnName": "bar_owner", 
+        "IsPrimaryKey": false, 
+        "TableName": "bar"
+    }, 
+    {
+        "ColumnName": "bar_address", 
+        "IsPrimaryKey": false, 
+        "TableName": "bar"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "ColumnName": "*", 
+        "IsPrimaryKey": false, 
+        "TableName": "foo"
+    }, 
+    {
+        "ColumnName": "id", 
+        "IsPrimaryKey": true, 
+        "TableName": "foo"
+    }, 
+    {
+        "ColumnName": "foo_name", 
+        "IsPrimaryKey": false, 
+        "TableName": "foo"
+    }, 
+    {
+        "ColumnName": "bar_id", 
+        "IsPrimaryKey": false, 
+        "TableName": "foo"
+    }
+]

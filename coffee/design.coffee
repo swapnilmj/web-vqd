@@ -16,7 +16,7 @@ $ ->
 
   fillResultData = (sql)->
       $.ajax({
-        url:"query_results.php"
+        url:"query_results.demo"
         data:{ sql: sql }
         cache:false
 
@@ -66,7 +66,7 @@ $ ->
         if $.cookie('schema') == schema then return   #no loading required
         $.cookie 'schema', schema
         $.ajax({
-          url:"ajax/table_list.php"
+          url:"ajax/table_list.demo"
           data:{ schema: schema }
           cache:false
         }).done( (html) ->

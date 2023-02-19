@@ -66,7 +66,7 @@ $(function() {
       console.log(data_dQuery);
       return $.ajax({
         type: "GET",
-        url: "ajax/save_query.php",
+        url: "ajax/save_query.demo",
         data: {
           mQuery: data_mQuery,
           dQuery: data_dQuery

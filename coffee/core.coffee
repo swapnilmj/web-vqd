@@ -271,7 +271,7 @@ $ ->
             #console.log "Table #{tableName} already added"
             return 0
       $.ajax({
-          url: 'ajax/table_json.php',
+          url: 'ajax/table_json.' + tableName + '.demo',
           dataType: 'json',
           data: { table: tableName },
           #async:false
