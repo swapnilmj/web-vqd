@@ -32,7 +32,8 @@ phpMyAdmin ](http://www.phpmyadmin.net/) ).
 ## Installation
 
 Extract all the files to the `www` folder of your web server. Open `conn.php`
-file and set the `$username` and `$password` for your MySQL database.
+file and set the `$username` and `$password` for your MySQL database. 
+This user (configured in conn.php) needs to have atleast `READ` access to `information_schema`.
 
 ## Limitations (as of now)
 
