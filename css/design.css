@@ -273,7 +273,7 @@
             padding: 2px 4px;
             margin-left: 10px;
             
-            background: #777777;
+            background: #C07272;
             color: #FFFFFF;
             border: 1px solid #494949;
         }
@@ -370,4 +370,15 @@
 
         #table-selection {
             opacity: 0.9;
+        }
+
+        #feedback-btn {
+            float: right;
+            padding: 1px;
+            padding: 0px 2px;
+            color: black;
+            background: white;
+            border: 2px dashed;
+            margin: 0px 2px;
+        
         }

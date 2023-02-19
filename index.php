@@ -88,10 +88,13 @@
 			
     <div id="right-pane" class="design-mode">
 		<div id="tool-bar" >
+
 				<span id="project-logo" style="float: right;">
 				<span style="" class="wb">  Web-based </span>
 				<span style="" class="vqd"> Visual Query Designer </span>
 				</span>
+                <a  id="feedback-btn" href="mailto:swapnil.gnu@gmail.com?subject=Web-VQD user feedback">Email feedback to author</a>
+
 				<span style="float: left;">
 				Schema : 
 				<select name="schema" >
