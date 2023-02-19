@@ -7,7 +7,7 @@ $Schema = $_COOKIE['schema'];
 ?>
 <div id="table-selection">
 	<div id="">
-        Add tables
+        Select tables to add
     </div>
 	<div id="table-list">
     <?php

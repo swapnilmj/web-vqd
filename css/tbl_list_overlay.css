@@ -2,6 +2,7 @@
 #table-list {
     /*width:300px;*/
     font-family : sans-serif;
+    margin: 0.5em 0;
     
 }
 #table-list  .item {
@@ -34,7 +35,7 @@
     left: 30%;
     z-index: 10000;
     background-color: #ffffff;
-    padding: 5px 5px;
+    padding: 10px;
     border: 5px solid #C4C4C4;
     
     margin-top: 20px;

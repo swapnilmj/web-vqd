@@ -149,7 +149,7 @@
 
 	<div id="table-selection">
 		<div id="">
-			Add tables
+            <strong> Select tables/views to add </strong>
 		</div>
 		<div id="table-list">
 		
