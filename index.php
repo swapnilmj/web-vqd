@@ -153,7 +153,7 @@
 		</div>	
 			<div id="table-btns">
 				<span class="butn ok">
-					GO
+					Select
 				</span>
 				<span class="butn cancel">
 					Cancel

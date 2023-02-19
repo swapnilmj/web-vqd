@@ -23,6 +23,12 @@ phpMyAdmin ](http://www.phpmyadmin.net/) ).
 ## Screencast
 [Youtube](https://youtu.be/vezEzwSiIjc) / [Invidious](https://yewtu.be/watch?v=vezEzwSiIjc)
 
+## Dependencies
+ - apache2
+ - mysql server
+ - php7
+ - php mysqli extension
+
 ## Installation
 
 Extract all the files to the `www` folder of your web server. Open `conn.php`
