@@ -1,5 +1,7 @@
 # Web-based Visual Query Designer
 
+[![GitHub mirror](https://img.shields.io/badge/mirror-GitHub-black.svg?logo=github)](https://github.com/swapnilmj/web-vqd) [![Codeberg mirror](https://img.shields.io/badge/mirror-Codeberg-blue.svg?logo=codeberg)](https://codeberg.org/swapnilmj/web-vqd)
+
 Web-based Visual Query Designer is a tool for visually generating SELECT SQL queries.
 Currently, it is designed only for MySQL .
 
