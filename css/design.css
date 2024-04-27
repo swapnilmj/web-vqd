@@ -249,7 +249,7 @@
 
         }
         .hoverable {
-            opacity:0;
+            opacity:0.2;
             cursor: pointer;
         }        
         .cell-dragger:hover .hoverable {
