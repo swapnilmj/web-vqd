@@ -3,6 +3,14 @@
 [![Codeberg repository](https://img.shields.io/badge/repository-Codeberg-blue.svg?logo=codeberg)](https://codeberg.org/swapnilmj/web-vqd)
 [![GitHub mirror](https://img.shields.io/badge/mirror-GitHub-black.svg?logo=github)](https://github.com/swapnilmj/web-vqd) 
 
+## I am currently open to new job opportunities
+
+E-mail: swapnil.gnu+github@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/swapnilmj/
+
+---
+
 Web-based Visual Query Designer is a tool for visually generating SELECT SQL queries.
 Currently, it is designed only for MySQL .
 
